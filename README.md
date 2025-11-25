@@ -1,4 +1,4 @@
-# Kickstart for GitHub MCP Server
+# Kickstart for my MCP servers
 
 ## Requirements
 - Docker
