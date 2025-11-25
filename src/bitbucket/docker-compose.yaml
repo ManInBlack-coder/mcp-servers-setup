@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bitbucket-mcp:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: bitbucket-mcp-server:latest
+    container_name: bitbucket-mcp-server
+    stdin_open: true
+    tty: true
+    environment:
+      - BITBUCKET_USERNAME=${BITBUCKET_USERNAME}
+      - BITBUCKET_APP_PASSWORD=${BITBUCKET_APP_PASSWORD}
+    restart: unless-stopped

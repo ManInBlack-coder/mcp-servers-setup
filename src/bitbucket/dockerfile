@@ -1,0 +1,13 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+RUN apk add --no-cache git
+
+RUN npm install -g github:pdogra1299/bitbucket-mcp-server
+
+ENV BITBUCKET_URL=https://api.bitbucket.org
+ENV BITBUCKET_USERNAME=${BITBUCKET_USERNAME}
+ENV BITBUCKET_APP_PASSWORD=${BITBUCKET_APP_PASSWORD}
+
+ENTRYPOINT [ "npx", "-y", "bitbucket-mcp-server" ]
