@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+      "bitbucket": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-e",
+          "BITBUCKET_USERNAME=your_username",
+          "BITBUCKET_PASSWORD=your_password",
+          "bitbucket-mcp-server:latest"
+        ]
+      }
+    }
+  }
